@@ -14,7 +14,7 @@ NODE2IP=$4
 NFS_CLIENTS_IP_RANGE=$5     # E.g., "10.0.0.0/24". Can be "*", but strongly discouraged
 
 # This VM's IP address, to detect if this VM should be the master (Node 1 is the initial master)
-#MY_IP=$(hostname -i)
+# Previous version  MY_IP=$(hostname -i)
 MY_IP=$(hostname --all-ip-addresses)
 
 . ./helper_functions.sh
