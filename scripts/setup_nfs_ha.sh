@@ -15,7 +15,7 @@ NFS_CLIENTS_IP_RANGE=$5     # E.g., "10.0.0.0/24". Can be "*", but strongly disc
 
 # This VM's IP address, to detect if this VM should be the master (Node 1 is the initial master)
 # Previous version  MY_IP=$(hostname -i)
-MY_IP=$(hostname --ip-address)
+MY_IP=$(hostname --all-ip-addresses)
 # Remove trailing white space
 MY_IP="$(echo -e "${MY_IP}" | tr -d '[:space:]')"
 # Update /etc/hosts
