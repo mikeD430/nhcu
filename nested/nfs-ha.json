@@ -148,7 +148,7 @@
         "sku": {
           "name": "Standard"
         },
-        "apiVersion": "2017-10-01",
+        "apiVersion": "2019-02-01",
         "location": "[parameters('location')]",
         "name": "[variables('nfsHaLbName')]",
         "properties": {
