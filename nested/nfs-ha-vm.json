@@ -39,13 +39,7 @@
         "description": "Statically assigned private IP addresses that should be assigned to the two VMs' NICs to be deployed. Must belong to the IP range of the specified subnet"
       },
       "type": "array"
-    },
-    "publicipAddrs": {
-      "metadata": {
-        "description": "Statically assigned public IP ids"
-      },
-      "type": "array"
-    },
+    },    
     "nfsClientsIPRange": {
       "metadata": {
         "description": "IP range of the allowed NFS clients. E.g., 10.0.0.0/24"
@@ -145,7 +139,6 @@
             "properties": {
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddrs')[parameters('vmIndex')]]",
-              "publicIpAddress": { "id": "[parameters('publicipAddrs')[parameters('vmIndex')]]" },    
               "subnet": {
                 "id": "[parameters('subnetId')]"
               },
