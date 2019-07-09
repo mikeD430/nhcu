@@ -40,6 +40,18 @@
         },
         "type": "string"
       },
+       "node0PublicIPAddrId": {
+        "metadata": {
+          "description": "Public IP Id 0"
+        },
+        "type": "string"
+      },
+        "node1PublicIPAddrId": {
+        "metadata": {
+          "description": "Public IP Id 1"
+        },
+        "type": "string"
+      },
       "nfsClientsIPRange": {
         "metadata": {
           "description": "IP range of the allowed NFS clients. E.g., 10.0.0.0/24"
@@ -518,6 +530,9 @@
             "ipAddrs": {
               "value": "[variables('nodeIpAddrs')]"
             },
+             "publicipAddrs": {
+              "value": "[variables('nodePublicIpAddrs')]"
+            },
             "nfsClientsIPRange": {
               "value": "[parameters('nfsClientsIPRange')]"
             },
@@ -570,6 +585,10 @@
       "nodeIpAddrs": [
         "[parameters('node0IPAddr')]",
         "[parameters('node1IPAddr')]"
+      ],
+       "nodePublicIpAddrs": [
+        "[parameters('node0PublicIPAddrId')]",
+        "[parameters('node1PublicIPAddrId')]"
       ],
       "nfsHaLbName": "[concat('nfs-ha-lb-', parameters('resourcesUniqueString'))]",
       "nfsHaLbFeName": "nfs-ha-lb-fe",
