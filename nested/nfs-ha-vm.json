@@ -117,7 +117,8 @@
         "description": "Unique string of fixed length (e.g., 6) identifying related resources"
       },
       "type": "string",
-      "defaultValue": "[substring(uniqueString(resourceGroup().id, deployment().name), 3, 6)]"
+      "defaultValue": "[substring(uniqueString(resourceGroup().id, deployment().name), 3, 6)]",
+      "value" : "nfsboomi"
     },
     "lbBeId": {
       "metadata": {
