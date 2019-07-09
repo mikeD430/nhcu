@@ -39,19 +39,7 @@
           "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
         },
         "type": "string"
-      },
-       "node0PublicIPAddrId": {
-        "metadata": {
-          "description": "Public IP Id 0"
-        },
-        "type": "string"
-      },
-        "node1PublicIPAddrId": {
-        "metadata": {
-          "description": "Public IP Id 1"
-        },
-        "type": "string"
-      },
+      },    
       "nfsClientsIPRange": {
         "metadata": {
           "description": "IP range of the allowed NFS clients. E.g., 10.0.0.0/24"
@@ -529,10 +517,7 @@
             },
             "ipAddrs": {
               "value": "[variables('nodeIpAddrs')]"
-            },
-             "publicipAddrs": {
-              "value": "[variables('nodePublicIpAddrs')]"
-            },
+            },          
             "nfsClientsIPRange": {
               "value": "[parameters('nfsClientsIPRange')]"
             },
