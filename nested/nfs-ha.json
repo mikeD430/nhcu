@@ -39,7 +39,19 @@
           "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
         },
         "type": "string"
-      },    
+      },
+       "node0IPAddrPublicParm": {
+        "metadata": {
+          "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
+        },
+        "type": "string"
+      },
+       "node1IPAddrPublicParm": {
+        "metadata": {
+          "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
+        },
+        "type": "string"
+      },
       "nfsClientsIPRange": {
         "metadata": {
           "description": "IP range of the allowed NFS clients. E.g., 10.0.0.0/24"
@@ -517,7 +529,10 @@
             },
             "ipAddrs": {
               "value": "[variables('nodeIpAddrs')]"
-            },          
+            },
+            "ipAddrsPublic": {
+              "value": "[variables('nodeIpAddrsPublic')]"
+            },
             "nfsClientsIPRange": {
               "value": "[parameters('nfsClientsIPRange')]"
             },
@@ -570,6 +585,10 @@
       "nodeIpAddrs": [
         "[parameters('node0IPAddr')]",
         "[parameters('node1IPAddr')]"
+      ],
+      "nodeIpAddrsPublic": [
+        "[parameters('node0IPAddrPublicParm')]",
+        "[parameters('node1IPAddrPublicParm')]"
       ],
       "nfsHaLbName": "[concat('nfs-ha-lb-', parameters('resourcesUniqueString'))]",
       "nfsHaLbFeName": "nfs-ha-lb-fe",
