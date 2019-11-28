@@ -40,13 +40,13 @@
         },
         "type": "string"
       },
-       "node0IPAddrPublicParm": {
+       "node0IPAddrPublic": {
         "metadata": {
           "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
         },
         "type": "string"
       },
-       "node1IPAddrPublicParm": {
+       "node1IPAddrPublic": {
         "metadata": {
           "description": "IP address of node 1 (statically assigned). E.g., 10.0.0.22. Must belong to the IP range of the specified subnet"
         },
@@ -587,8 +587,8 @@
         "[parameters('node1IPAddr')]"
       ],
       "nodeIpAddrsPublic": [
-        "[parameters('node0IPAddrPublicParm')]",
-        "[parameters('node1IPAddrPublicParm')]"
+        "[parameters('node0IPAddrPublic')]",
+        "[parameters('node1IPAddrPublic')]"
       ],
       "nfsHaLbName": "[concat('nfs-ha-lb-', parameters('resourcesUniqueString'))]",
       "nfsHaLbFeName": "nfs-ha-lb-fe",
