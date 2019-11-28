@@ -571,10 +571,6 @@
         "[parameters('node0IPAddr')]",
         "[parameters('node1IPAddr')]"
       ],
-       "nodePublicIpAddrs": [
-        "[parameters('node0PublicIPAddrId')]",
-        "[parameters('node1PublicIPAddrId')]"
-      ],
       "nfsHaLbName": "[concat('nfs-ha-lb-', parameters('resourcesUniqueString'))]",
       "nfsHaLbFeName": "nfs-ha-lb-fe",
       "nfsHaLbFeId": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', variables('nfsHaLbName'), variables('nfsHaLbFeName'))]",
